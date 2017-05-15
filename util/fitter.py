@@ -1,0 +1,1 @@
+/home/pushkar/walking/data/Swetha/archive/Adult specic kd/2014-05-27/dicer;OK371;Gal80ts X Glucl RNAi/Ctrl/fitter.py
