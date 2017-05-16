@@ -57,5 +57,5 @@ ana.genGaitDiagram()
 # ana.genGaitPaint()
 # ana.genGaitPlot()
 
-print 'Walk speed', int(ana.getWalkingSpeed()[0])
+print('Walk speed', int(ana.getWalkingSpeed()[0]))
 

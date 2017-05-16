@@ -185,7 +185,7 @@ class Analyze:
                             zip(swingtaggedlists, stancetaggedlists)]
 
         # #print(map(len,taggedlists))
-        max_w = max(map(len, swingtaggedlists + stancetaggedlists)) * (event_w + pad)
+        max_w = max(map(len, list(swingtaggedlists) + list(stancetaggedlists))) * (event_w + pad)
         w = 100 + max_w + 2 * pad
 
         # 		bg = (255, 255, 255)
