@@ -801,7 +801,8 @@ class Analyze:
 
 
 if __name__ == "__main__":
-    path = '/media/pushkar/ccc1f18b-7f26-4c0d-b510-a582d28d075e/pushkar/walking/data/Swetha/analysis/RNAi/Constitutive/Subsets/Rdli/48183 GAL4/top30/01/'
+    path = '/media/pushkar/ccc1f18b-7f26-4c0d-b510-a582d28d075e/pushkar/walking/data/Pushkar/analysis/CS_Fast/27'
     ana = Analyze(path)
     print(ana)
-    print(ana.getSwingAmplitude('L2'))
+    # print(ana.getSwingAmplitude('L2'))
+    print(ana.getWalkingSpeed())
