@@ -805,4 +805,7 @@ if __name__ == "__main__":
     ana = Analyze(path)
     print(ana)
     # print(ana.getSwingAmplitude('L2'))
-    print(ana.getWalkingSpeed())
+    # print(ana.getWalkingSpeed())
+    states = ('S3', 'S2', 'S1', 'S0',)
+    for state in states:
+        print(state, ana.getConcurrency(state=state))
