@@ -160,7 +160,10 @@ class Analyze:
 
     def _plotGait(self, plt, eventlist, h, bot):
         event_w = 20
-        colordefs = colordefs = ['#ffffff', '#188487', '#A60628', ]
+        # Red swings + Green stances
+        # colordefs = ['#ffffff', '#188487', '#A60628', ]
+        # Green swings + Red stances
+        colordefs = ['#ffffff', '#A60628', '#188487', ]
         colors = [colordefs[k] for k in eventlist]
         plt.bar(arange(len(eventlist)) + event_w, [h] * len(eventlist), width=10, bottom=bot, color=colors)
 
@@ -238,7 +241,10 @@ class Analyze:
                      '#E24A33', '#467821', ]
 
         # 		colors = {2:'green', 1:'magenta', 0:'grey'}
-        colors = {2: colordefs[0], 1: colordefs[1], 0: 'white'}
+        # Red swings + Green stances
+        # colors = {2: colordefs[0], 1: colordefs[1], 0: 'white'}
+        # Green swings + Red stances
+        colors = {2: colordefs[1], 1: colordefs[0], 0: colordefs[0]}
         self._rect(dr, (x, y), (x + w, y + h), fillc=colors[evt], outlinec=(220, 220, 220))
 
     def _rect(self, dro, xy, wh, fillc, outlinec="blue"):
@@ -801,11 +807,13 @@ class Analyze:
 
 
 if __name__ == "__main__":
-    path = '/media/pushkar/ccc1f18b-7f26-4c0d-b510-a582d28d075e/pushkar/walking/data/Pushkar/analysis/CS_Fast/27'
+    path = '/media/pushkar/ccc1f18b-7f26-4c0d-b510-a582d28d075e/pushkar/walking/data/Pushkar/analysis/CS_Fast/37'
     ana = Analyze(path)
     print(ana)
     # print(ana.getSwingAmplitude('L2'))
     # print(ana.getWalkingSpeed())
-    states = ('S3', 'S2', 'S1', 'S0',)
-    for state in states:
-        print(state, ana.getConcurrency(state=state))
+    # states = ('S3', 'S2', 'S1', 'S0',)
+    # for state in states:
+    #     print(state, ana.getConcurrency(state=state))
+
+    ana.genGaitDiagram()
